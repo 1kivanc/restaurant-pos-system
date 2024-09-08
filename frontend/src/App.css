@@ -1,0 +1,131 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Sayfanın tamamında scroll özelliğini devre dışı bırak */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden; /* Ana içeriğin taşmasını engelle */
+}
+
+.categories, .cart {
+  width: 20%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.products {
+  width: 60%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Sadece ürünlerin listelendiği alanda scroll özelliğini etkinleştir */
+}
+
+/* Scrollbar stilini özelleştirme */
+.products::-webkit-scrollbar {
+  width: 8px;
+}
+
+.products::-webkit-scrollbar-track {
+  background: #e2e2e2;
+  border-radius: 10px;
+}
+
+.products::-webkit-scrollbar-thumb {
+  background: #eeeeee;
+  border-radius: 10px;
+}
+
+.products::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0;
+}
+
+.cart {
+  width: 20%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #e9ecef;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+/* Modal Stilleri */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.modal-content button {
+  margin: 5px;
+  padding: 10px;
+}
+/* App.css içine eklenebilir */
+.MuiCard-root {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-10px);
+}
